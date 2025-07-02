@@ -5,5 +5,10 @@ public class Main {
         h.attack(new Matango());
         h.attack(new Goblin());
         h.attack(new Slime());
+
+        Wizard w = new Wizard();
+        w.name = "魔法使い";
+        w.attack(new Goblin());
+        w.attack(new Slime());
     }
 }
