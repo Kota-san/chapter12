@@ -13,4 +13,10 @@ public class Wizard extends Character{
         m.hp -= 20;
         this.mp -= 5;
     }
+
+    public void attack(Monster m) {
+        System.out.println(this.name + "の攻撃！");
+        System.out.println("敵に3ポイントのダメージ");
+        m.hp -= 3;
+    }
 }
