@@ -1,14 +1,23 @@
 public class Main {
     public static void main(String[] args) {
-        Hero h = new Hero();
-        h.name = "勇者";
-        h.attack(new Matango());
-        h.attack(new Goblin());
-        h.attack(new Slime());
+        Character[] c = new Character[3];
+        c[0] = new Hero();
+        c[0].name = "勇者";
 
-        Wizard w = new Wizard();
-        w.name = "魔法使い";
-        w.attack(new Goblin());
-        w.attack(new Slime());
+        c[1] = new Wizard();
+        c[1].name = "魔法使い";
+
+        c[2] = new Thief();
+        c[2].name = "盗賊";
+
+        for (Character member : c) {
+            member.hp += 50; // 全員のHPを回復
+        }
+
+        for (Character member : c) {
+            for (Monster m : monsters) {
+                member.attack(m);
+            }
+        }
     }
 }
